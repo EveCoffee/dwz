@@ -1,0 +1,25 @@
+{
+  "name": "dwz",
+  "version": "1.0.0",
+  "description": "快速生成短网址",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.coding.net:coolcoffee/dwz.git"
+  },
+  "keywords": [
+    "短网址"
+  ],
+  "author": "CoolCoffee'",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.13.1",
+    "ejs": "^2.3.2",
+    "express": "^4.13.0",
+    "mongoose": "^4.0.6",
+    "path": "^0.11.14"
+  }
+}

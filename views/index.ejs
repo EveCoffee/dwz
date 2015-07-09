@@ -1,0 +1,77 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="bower_components/uikit/css/uikit.css"/>
+</head>
+<body ng-app="Dwz">
+
+<div class="uk-container uk-container-center uk-margin-top">
+    <!-- 这是包含拨动元素的选项卡式导航 -->
+    <ul class="uk-tab uk-width-4-10 uk-push-3-10 " data-uk-tab="{connect:'#my-id'}">
+        <li><a href="">网址缩短</a></li>
+        <li><a href="">网址还原</a></li>
+    </ul>
+
+    <!-- 包含内容项目的容器 -->
+    <ul id="my-id" class="uk-switcher">
+        <li>
+            <form class="uk-form" ng-controller="addUrl" ng-submit="dwz.submit()">
+                <div class="uk-width-4-10 uk-push-3-10">
+                    <fieldset data-uk-margin class="uk-margin-top">
+                        <legend>自定义网址</legend>
+                        <div>
+                            <input ng-model="dwz.url" class="uk-width-1-1" type="text" placeholder="请输入要缩减的网址">
+                        </div>
+                        <div class="uk-grid uk-margin-top">
+                            <div class="uk-width-5-10" style="line-height: 30px">{{dwz.domain}}</div>
+                            <div class="uk-width-5-10">
+                                <input ng-model="dwz.customUrl" type="text" placeholder="请输入自定义网址">
+                            </div>
+                        </div>
+                        <div class="uk-margin-top">
+                            <button class="uk-button" type="submit">变变变</button> &nbsp;&nbsp;
+                            <label><input type="checkbox"> 记住我</label>
+                        </div>
+                        <div class="uk-margin-top">
+                            你的短网址是：{{dwz.customDwz}}
+                        </div>
+                    </fieldset>
+                </div>
+            </form>
+        </li>
+
+        <li>
+            <form class="uk-form" ng-controller="addUrl" ng-submit="dwz.submit()">
+                <div class="uk-width-4-10 uk-push-3-10">
+                    <fieldset data-uk-margin class="uk-margin-top">
+                        <legend>自定义网址</legend>
+                        <div>
+                            <input ng-model="dwz.url" class="uk-width-1-1" type="text" placeholder="请输入要缩减的网址">
+                        </div>
+                        <div class="uk-margin-top">
+                            <button class="uk-button" type="submit">还原网址</button> &nbsp;&nbsp;
+                            <label><input type="checkbox"> 记住我</label>
+                        </div>
+                    </fieldset>
+                </div>
+            </form>
+        </li>
+    </ul>
+
+</div>
+
+<div id="qrcode" style="width: 200px;height: 200px;">
+
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="bower_components/uikit/js/uikit.min.js"></script>
+<script src="js/jquery.qrcode.min.js"></script>
+<script src="bower_components/angularjs/angular.min.js"></script>
+<script src="js/dwz.js"></script>
+
+<script>
+    $('#qrcode').qrcode("http://www.wangchaoyi.com");
+</script>
+</body>
+</html>

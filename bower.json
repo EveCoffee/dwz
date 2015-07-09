@@ -1,0 +1,22 @@
+{
+  "name": "dwz",
+  "version": "0.0.0",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "短网址"
+  ],
+  "authors": [
+    "CoolCoffee"
+  ],
+  "license": "MIT",
+  "homepage": "git@git.coding.net:coolcoffee/dwz.git",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
